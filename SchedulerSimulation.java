@@ -78,7 +78,7 @@ class Process implements Runnable {
     }
 
     public long getTurnaroundTime() {
-        return completionTime - arrivalTime;
+        return waitingTime + burstTime;
     }
 
     // This method will be called when the thread for this process is started
